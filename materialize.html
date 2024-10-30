@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miami University Dining</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <style>
+        /* Miami University's primary red color */
+        .miami-red {
+            background-color: #C41E3A !important;
+        }
+
+        .miami-red-text {
+            color: #C41E3A !important;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        .header-bg {
+            background-color: #C41E3A;
+        }
+
+        .section-bg {
+            background-color: #f4f4f4;
+        }
+
+        .btn {
+            background-color: #C41E3A;
+        }
+
+        .btn:hover {
+            background-color: #A01830;
+        }
+
+        .page-footer {
+            background-color: #333;
+        }
+
+        .circle-container {
+            padding: 20px;
+        }
+
+        .location-card {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-wrapper">
+            <div class="container">
+                <ul class="right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="options.html">Options</a></li>
+                    <li><a href="materialize.html">Materialize</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="section header-bg center-align">
+        <h1 class="white-text">Miami University Dining Services</h1>
+        <p class="white-text">Providing Nutritious and Delicious Meals to Our Campus Community</p>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="section section-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6">
+                    <h2 class="miami-red-text">Who We Are</h2>
+                    <p>Miami University Dining Services is dedicated to providing nutritious and delicious meals to our
+                        students, faculty, and staff. We emphasize sustainability and local sourcing in our menu
+                        planning.</p>
+                    <p>We strive to offer a diverse selection of meal options while accommodating all dietary
+                        restrictions and
+                        preferences. From vegan to gluten-free options, we aim to meet the needs of our campus
+                        community.</p>
+                </div>
+                <div class="col s12 m6 circle-container center-align">
+                    <img src="/api/placeholder/300/300" alt="Dining Hall" class="circle responsive-img z-depth-2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Locations -->
+    <div class="section white">
+        <div class="container">
+            <h2 class="miami-red-text center-align">Featured Dining Locations</h2>
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card location-card">
+                        <div class="card-image">
+                            <img src="/api/placeholder/400/300" alt="The Hub Food Court">
+                            <span class="card-title">The Hub Food Court</span>
+                        </div>
+                        <div class="card-content">
+                            <p>A central dining location offering various cuisine options, from made-to-order sandwiches
+                                to international dishes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card location-card">
+                        <div class="card-image">
+                            <img src="/api/placeholder/400/300" alt="Central Hall Dining">
+                            <span class="card-title">Central Hall Dining</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Our main dining hall featuring buffet-style dining with fresh, locally-sourced
+                                ingredients.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card location-card">
+                        <div class="card-image">
+                            <img src="/api/placeholder/400/300" alt="Café 1809">
+                            <span class="card-title">Café 1809</span>
+                        </div>
+                        <div class="card-content">
+                            <p>A cozy café offering coffee, pastries, and grab-and-go meals perfect for busy students.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Tour -->
+    <div class="section grey lighten-4">
+        <div class="container">
+            <h2 class="miami-red-text center-align">Virtual Tour of Our Facilities</h2>
+            <div class="video-container">
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="section section-bg">
+        <div class="container">
+            <h2 class="miami-red-text">Contact Us</h2>
+            <div class="row">
+                <div class="col s12 m6">
+                    <form>
+                        <div class="input-field">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="name" type="text" class="validate">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">email</i>
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">message</i>
+                            <textarea id="message" class="materialize-textarea"></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="btn waves-effect waves-light">Send
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </form>
+                </div>
+                <div class="col s12 m6">
+                    <h5>Get in Touch</h5>
+                    <p><i class="material-icons">phone</i> (123) 456-7890</p>
+                    <p><i class="material-icons">email</i> dining@miamioh.edu</p>
+                    <p><i class="material-icons">access_time</i> Hours vary by location</p>
+                    <p>Visit our <a href="https://miamioh.edu/dining" target="_blank">official site</a> for more
+                        information</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <p class="white-text">&copy; 2024 Miami University Dining Services. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
