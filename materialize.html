@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script> src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" ></script>
     <style>
         /* Miami University's primary red color */
         .miami-red {
@@ -263,11 +264,11 @@
         </div>
     </footer>
     <script>
-        // Initialize modal
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.modal');
-            var instances = M.Modal.init(elems);
-        });
+            // Initialize modal
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.modal');
+                var instances = M.Modal.init(elems);
+            });
 
 
         // Function to display selected pastry
@@ -275,22 +276,66 @@
             const selectedPastry = document.querySelector('input[name="pastry"]:checked').value;
             document.getElementById('pastry-response').innerText = `You selected: ${selectedPastry}`;
         }
-        // Function to handle email subscription form submission
         function submitEmail(event) {
             event.preventDefault();
             const email = document.getElementById('email').value;
             document.getElementById('email-response').innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
-            document.getElementById('email').value = ''; // Clear the input
+            document.getElementById('email').value = '';
 
 
-            // Display modal
             const modalText = document.getElementById('modal-content-text');
             modalText.innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
             const modal = M.Modal.getInstance(document.getElementById('modal1'));
             modal.open();
         }
     </script>
+    <script>
+        $(document).ready(function () {
+            $('nav a, a[href*="#"]').on('click', function (event) {
+                if (this.hash !== '') {
+                    event.preventDefault();
+                    const hash = this.hash;
 
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+            $('.location-card').hide();
+
+            $(window).on('scroll', function () {
+                $('.location-card').each(function () {
+                    const cardPosition = $(this).offset().top;
+                    const scrollPosition = $(window).scrollTop() + $(window).height();
+
+                    if (scrollPosition > cardPosition) {
+                        $(this).fadeIn(1000);
+                    }
+                });
+            });
+
+            $(window).trigger('scroll');
+
+            $('.input-field').hover(
+                function () {
+                    $(this).find('input, textarea').addClass('active');
+                    $(this).find('i').addClass('miami-red-text').animate({
+                        fontSize: '2.2rem'
+                    }, 200);
+                },
+                function () {
+                    if (!$(this).find('input, textarea').val()) {
+                        $(this).find('input, textarea').removeClass('active');
+                    }
+                    $(this).find('i').removeClass('miami-red-text').animate({
+                        fontSize: '2rem'
+                    }, 200);
+                }
+            );
+        });
+    </script>
 </body>
 
 </html>
