@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miami University Dining</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script> src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" ></script>
+    <style>
+        /* Miami University's primary red color */
+        .miami-red {
+            background-color: #C41E3A !important;
+        }
+
+        .miami-red-text {
+            color: #C41E3A !important;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        .header-bg {
+            background-color: #C41E3A;
+        }
+
+        .section-bg {
+            background-color: #f4f4f4;
+        }
+
+        .btn {
+            background-color: #C41E3A;
+        }
+
+        .btn:hover {
+            background-color: #A01830;
+        }
+
+        .page-footer {
+            background-color: #333;
+        }
+
+        .circle-container {
+            padding: 20px;
+        }
+
+        .location-card {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-wrapper">
+            <div class="container">
+                <ul class="right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="options.html">Options</a></li>
+                    <li><a href="materialize.html">Materialize</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="section header-bg center-align">
+        <h1 class="white-text">Miami University Dining Services</h1>
+        <p class="white-text">Providing Nutritious and Delicious Meals to Our Campus Community</p>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="section section-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6">
+                    <h2 class="miami-red-text">Who We Are</h2>
+                    <p>Miami University Dining Services is dedicated to providing nutritious and delicious meals to our
+                        students, faculty, and staff. We emphasize sustainability and local sourcing in our menu
+                        planning.</p>
+                    <p>We strive to offer a diverse selection of meal options while accommodating all dietary
+                        restrictions and
+                        preferences. From vegan to gluten-free options, we aim to meet the needs of our campus
+                        community.</p>
+                </div>
+                <div class="col s12 m6 circle-container center-align">
+                    <img src="/api/placeholder/300/300" alt="Dining Hall" class="circle responsive-img z-depth-2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Locations -->
+    <div class="section white">
+        <div class="container">
+            <h2 class="miami-red-text center-align">Featured Dining Locations</h2>
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card location-card">
+                        <div class="card-image">
+                            <img src="/api/placeholder/400/300" alt="The Hub Food Court">
+                            <span class="card-title">The Hub Food Court</span>
+                        </div>
+                        <div class="card-content">
+                            <p>A central dining location offering various cuisine options, from made-to-order sandwiches
+                                to international dishes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card location-card">
+                        <div class="card-image">
+                            <img src="/api/placeholder/400/300" alt="Central Hall Dining">
+                            <span class="card-title">Central Hall Dining</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Our main dining hall featuring buffet-style dining with fresh, locally-sourced
+                                ingredients.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card location-card">
+                        <div class="card-image">
+                            <img src="/api/placeholder/400/300" alt="Café 1809">
+                            <span class="card-title">Café 1809</span>
+                        </div>
+                        <div class="card-content">
+                            <p>A cozy café offering coffee, pastries, and grab-and-go meals perfect for busy students.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Tour -->
+    <div class="section grey lighten-4">
+        <div class="container">
+            <h2 class="miami-red-text center-align">Virtual Tour of Our Facilities</h2>
+            <div class="video-container">
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="section section-bg">
+        <div class="container">
+            <h2 class="miami-red-text">Contact Us</h2>
+            <div class="row">
+                <div class="col s12 m6">
+                    <form>
+                        <div class="input-field">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="name" type="text" class="validate">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">email</i>
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field">
+                            <i class="material-icons prefix">message</i>
+                            <textarea id="message" class="materialize-textarea"></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="btn waves-effect waves-light">Send
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </form>
+                </div>
+                <div class="col s12 m6">
+                    <h5>Get in Touch</h5>
+                    <p><i class="material-icons">phone</i> (123) 456-7890</p>
+                    <p><i class="material-icons">email</i> dining@miamioh.edu</p>
+                    <p><i class="material-icons">access_time</i> Hours vary by location</p>
+                    <p>Visit our <a href="https://miamioh.edu/dining" target="_blank">official site</a> for more
+                        information</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="radio-section" class="section container">
+        <h2>Select Your Favorite Pastry</h2>
+        <form>
+            <p>
+                <label>
+                    <input name="pastry" type="radio" value="Croissant" onclick="displayPastry()" />
+                    <span>Croissant</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input name="pastry" type="radio" value="Muffin" onclick="displayPastry()" />
+                    <span>Muffin</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input name="pastry" type="radio" value="Donut" onclick="displayPastry()" />
+                    <span>Donut</span>
+                </label>
+            </p>
+        </form>
+        <div id="pastry-response"></div>
+    </div>
+    <div class="carousel">
+        <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
+        <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
+        <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
+        <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
+        <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
+    </div>
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+    </ul>
+
+    <!-- Email Feedback Section -->
+    <div id="feedback-section" class="section container">
+        <h2>Subscribe for Updates</h2>
+        <form onsubmit="submitEmail(event)">
+            <div class="input-field">
+                <input id="email" type="email" required>
+                <label for="email">Email</label>
+            </div>
+            <button type="submit" class="btn waves-effect waves-light">Subscribe</button>
+        </form>
+        <div id="email-response"></div>
+    </div>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <p class="white-text">&copy; 2024 Miami University Dining Services. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+            // Initialize modal
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.modal');
+                var instances = M.Modal.init(elems);
+            });
+
+
+        // Function to display selected pastry
+        function displayPastry() {
+            const selectedPastry = document.querySelector('input[name="pastry"]:checked').value;
+            document.getElementById('pastry-response').innerText = `You selected: ${selectedPastry}`;
+        }
+        function submitEmail(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            document.getElementById('email-response').innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+            document.getElementById('email').value = '';
+
+
+            const modalText = document.getElementById('modal-content-text');
+            modalText.innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+            const modal = M.Modal.getInstance(document.getElementById('modal1'));
+            modal.open();
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('nav a, a[href*="#"]').on('click', function (event) {
+                if (this.hash !== '') {
+                    event.preventDefault();
+                    const hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+            $('.location-card').hide();
+
+            $(window).on('scroll', function () {
+                $('.location-card').each(function () {
+                    const cardPosition = $(this).offset().top;
+                    const scrollPosition = $(window).scrollTop() + $(window).height();
+
+                    if (scrollPosition > cardPosition) {
+                        $(this).fadeIn(1000);
+                    }
+                });
+            });
+
+            $(window).trigger('scroll');
+
+            $('.input-field').hover(
+                function () {
+                    $(this).find('input, textarea').addClass('active');
+                    $(this).find('i').addClass('miami-red-text').animate({
+                        fontSize: '2.2rem'
+                    }, 200);
+                },
+                function () {
+                    if (!$(this).find('input, textarea').val()) {
+                        $(this).find('input, textarea').removeClass('active');
+                    }
+                    $(this).find('i').removeClass('miami-red-text').animate({
+                        fontSize: '2rem'
+                    }, 200);
+                }
+            );
+        });
+    </script>
+</body>
+
+</html>
